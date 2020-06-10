@@ -64,36 +64,20 @@ nav a:hover {
 	color: white;
 }
 
-#namaLansia{
+main .container {
+	max-width: 1200px;
+}
+
+#namaLansia, #namaPendamping, #keluhanLansia, #riwayatPenyakit, #pola{
 	width: 350px;
 }
 
-#namaPendamping{
-	width: 350px;
-}
-
-#usia{
+#usia, #tekananDarah{
 	width: 60px;
 }
 
 #berat{
-	width: 50px;
-}
-
-#tekananDarah{
 	width: 60px;
-}
-
-#keluhanLansia{
-	width: 350px;
-}
-
-#riwayatPenyakit{
-	width: 350px;
-}
-
-#pola{
-	width: 350px;
 }
 
 .style-card {
