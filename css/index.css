@@ -60,5 +60,42 @@ nav a:hover {
 }
 
 .form-control {
-	
+	border-radius: 10px;
+	color: white;
+}
+
+#namaLansia{
+	width: 350px;
+}
+
+#namaPendamping{
+	width: 350px;
+}
+
+#usia{
+	width: 60px;
+}
+
+#berat{
+	width: 50px;
+}
+
+#tekananDarah{
+	width: 60px;
+}
+
+#keluhanLansia{
+	width: 350px;
+}
+
+#riwayatPenyakit{
+	width: 350px;
+}
+
+#pola{
+	width: 350px;
+}
+
+.style-card {
+	background: #B3D3D1;
 }
