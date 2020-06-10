@@ -20,6 +20,33 @@ time, mark, audio, video {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1;
+	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+
+
+.jumbotron {
+	background-color: #00b3ff;
+	text-align: center;
+	color: white;
+	font-size: 20px;
+	margin-bottom: 0;
+}
+
+nav {
+	background-color: #008cc7;
+	padding: 20px;
+}
+
+nav a{
+	color: white;
+	font-size: 20px;
+	text-decoration: none;
+	margin-left: 20px;
+}
+
+nav a:hover {
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
 }
