@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SCPK</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/css/index.css">
 </head>
@@ -26,6 +26,10 @@
                         <h1 style="font-size: 34px; margin-bottom: 30px; text-align: center;">Form Pengisian KMS Baru</h1>
                         <form action="#" method="POST">
                             <div class="form-group">
+                                <label for="namaLansia">Nama Lansia</label>
+                                <input type="text" id="namaLansia" class="form-control">
+                            </div>
+                            <div class="form-group">
                                 <label for="namaPendamping">Nama Pendamping</label>
                                 <input type="text" id="namaPendamping" class="form-control">
                             </div>
@@ -37,6 +41,37 @@
                                 <label for="alamat">Alamat Lengkap</label>
                                 <input type="text" id="alamat" class="form-control">
                             </div>
+                            <div class="form-group">
+                                <label for="berat">Jenis Kelamin</label>
+                                <br>
+                                <input type="radio" name="jenis_kelamin" value="Pria" checked>Pria
+                                <input type="radio" name="jenis_kelamin" value="Wanita">Wanita
+                            </div>
+                            <div class="form-group">
+                                <label for="berat">Berat</label>
+                                <input type="text" id="berat" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="tekananDarah">Tekanan Darah</label>
+                                <input type="text" id="tekananDarah" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="keluhanLansia">Keluhan Lansia</label>
+                                <input type="text" id="keluhanLansia" class="form-control">
+                                <input type="text" id="keluhanLansia" class="form-control">
+                                <input type="text" id="keluhanLansia" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="riwayatPenyakit">Riwayat Penyakit Lansia</label>
+                                <input type="text" id="riwayatPenyakit" class="form-control">
+                                <input type="text" id="riwayatPenyakit" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="pola">Pola Makan dan Hidup</label>
+                                <input type="text" id="pola" class="form-control">
+                                <input type="text" id="pola" class="form-control">
+                            </div>
+                            <a class="btn btn-lg btn-primary btn-block btn-login text-upper  case font-weight-bold mb-2" type="submit">Tambah</a>
                         </form>
                     </div>
                 </div>
