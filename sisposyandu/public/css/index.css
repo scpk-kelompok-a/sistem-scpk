@@ -56,30 +56,18 @@ nav a:hover {
 	border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
     margin-top: 20px;
-    padding: 20px;
-}
-
-.form-control {
-	border-radius: 10px;
-	color: white;
+	padding: 20px;
+	background-color: #B3D3D1;
 }
 
 main .container {
 	max-width: 1200px;
 }
 
-#namaLansia, #namaPendamping, #keluhanLansia, #riwayatPenyakit, #pola{
+#namaLansia, #namaPendamping, #keluhanLansia, #riwayatPenyakit, #polaMakan, #polaHidup{
 	width: 350px;
 }
 
-#usia, #tekananDarah{
+#usia, #tekananDarah, #berat, #suhuTubuh{
 	width: 60px;
-}
-
-#berat{
-	width: 60px;
-}
-
-.style-card {
-	background: #B3D3D1;
 }

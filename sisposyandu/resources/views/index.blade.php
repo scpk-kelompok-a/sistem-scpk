@@ -14,7 +14,7 @@
                         <div class="row justify-content-between">
                             <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <label for="namaLansia">Nama Lansia</label>
-                                <input type="text" id="namaLansia" class="form-control">
+                                <input type="text" id="namaLansia" class="form-control" name="namaLansia">
                             </div>
                             <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <label for="namaPendamping">Nama Pendamping</label>
@@ -35,11 +35,15 @@
                                 <label for="alamat">Alamat Lengkap</label>
                                 <input type="text" id="alamat" class="form-control">
                             </div>
-                            <div class="form-group col-3">
+                            <div class="form-group col-4">
                                 <label for="berat">Berat</label>
                                 <input type="text" id="berat" class="form-control">
                             </div>
-                            <div class="form-group col-3">
+                            <div class="form-group col-4">
+                                <label for="suhuTubuh">Suhu Tubuh</label>
+                                <input type="text" id="suhuTubuh" class="form-control">
+                            </div>
+                            <div class="form-group col-4">
                                 <label for="tekananDarah">Tekanan Darah</label>
                                 <input type="text" id="tekananDarah" class="form-control">
                             </div>
@@ -60,10 +64,21 @@
                                 </select>
                             </div>
                             <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <label for="pola">Pola Makan dan Hidup</label>
-                                <select type="text" id="keluhanLansia" class="form-control">
-                                    <option value="Diabetes">Diabetes</option>
-                                    <option value="Darah tinggi">Darah tinggi</option>
+                                <label for="polaHidup">Pola Hidup</label>
+                                <select type="text" id="polaHidup" class="form-control" name="polaHidup">
+                                    <option value="">Tidak Berolahraga</option>
+                                    <option value="">Berolahraga 3x Seminggu</option>
+                                    <option value="">Berolahraga 5x Seminggu</option>
+                                    <option value="">Berolahraga 7x Seminggu</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <label for="polaMakan">Pola Makan</label>
+                                <select type="text" id="polaMakan" class="form-control" name="polaMakan">
+                                    <option value="">Tidak Konsumsi Makanan Berlemak </option>
+                                    <option value="">Berolahraga 3x Seminggu</option>
+                                    <option value="">Berolahraga 5x Seminggu</option>
+                                    <option value="">Berolahraga 7x Seminggu</option>
                                 </select>
                             </div>
                         </div>
