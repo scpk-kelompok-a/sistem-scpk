@@ -52,7 +52,7 @@
                                 <select type="text" id="keluhanLansia" class="form-control">
                                     <option value="Sakit perut">Sakit perut</option>
                                     <option value="Sesak nafas">Sesak nafas</option>
-                                    <option value="Muntah">Muntah</option>
+                                    <option value="Pusing">Pusing</option>
                                     <option value="Masuk angin">Masuk angin</option>
                                 </select>
                             </div>
@@ -75,10 +75,10 @@
                             <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <label for="polaMakan">Pola Makan</label>
                                 <select type="text" id="polaMakan" class="form-control" name="polaMakan">
-                                    <option value="">Tidak Konsumsi Makanan Berlemak </option>
-                                    <option value="">Berolahraga 3x Seminggu</option>
-                                    <option value="">Berolahraga 5x Seminggu</option>
-                                    <option value="">Berolahraga 7x Seminggu</option>
+                                    <option value="">Tidak Konsumsi Makanan Berlemak</option>
+                                    <option value="">Makan Makanan Berlemak 3x Seminggu</option>
+                                    <option value="">Makan Makanan Berlemak 5x Seminggu</option>
+                                    <option value="">Makan Makanan Berlemak 7x Seminggu</option>
                                 </select>
                             </div>
                         </div>

@@ -15,8 +15,8 @@
             <p>Membantu penatalaksanaan lansia dengan keluhan tertentu</p>
         </div>
         <nav>
-            <a href="#">Input Data</a>
-            <a href="#">Riwayat Data</a>
+            <a href="/">Input Data</a>
+            <a href="/riwayat">Data Lansia</a>
         </nav>
     </header>   
 
