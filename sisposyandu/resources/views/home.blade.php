@@ -11,10 +11,8 @@
 <body>
     @yield('header')
     <header>
-        <div class="jumbotron">
             <h1 style="font-size: 34px; margin-bottom: 20px;">SCPK Puskesmas Maju Jaya</h1>
             <p>Membantu penatalaksanaan lansia dengan keluhan tertentu</p>
-        </div>
         <nav>
             <a href="/">Input Data</a>
             <a href="/riwayat">Data Lansia</a>
