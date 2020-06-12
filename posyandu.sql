@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 10, 2020 at 01:57 PM
+-- Generation Time: Jun 12, 2020 at 10:42 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.10
 
@@ -103,9 +103,26 @@ CREATE TABLE `kriteria` (
   `id_kriteria` int(11) NOT NULL,
   `nama_kriteria` varchar(25) NOT NULL,
   `bobot` int(11) NOT NULL,
-  `sifat` int(11) NOT NULL,
-  `satuan` varchar(5) NOT NULL
+  `sifat` varchar(11) NOT NULL,
+  `satuan` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `kriteria`
+--
+
+INSERT INTO `kriteria` (`id_kriteria`, `nama_kriteria`, `bobot`, `sifat`, `satuan`) VALUES
+(1, 'Berat Badan', 5, 'Cost', 'kg'),
+(2, 'Suhu Tubuh', 2, 'Cost', '°C'),
+(3, 'Tekanan Darah', 5, 'Cost', 'mmHg'),
+(4, 'Sakit Perut', 2, 'Benefit', ''),
+(5, 'Sesak Nafas', 5, 'Cost', 'per menit'),
+(6, 'Pusing', 2, 'Benefit', ''),
+(7, 'Masuk Angin', 1, 'Benefit', ''),
+(8, 'Diabetes', 5, 'Cost', 'mg/dL'),
+(9, 'Darah Tinggi', 5, 'Cost', 'mmHg'),
+(10, 'Makanan berlemak tinggi', 4, 'Cost', ''),
+(11, 'Berolahraga', 5, 'Beneffit', '');
 
 -- --------------------------------------------------------
 
@@ -142,11 +159,21 @@ CREATE TABLE `pendamping` (
 
 CREATE TABLE `pohon` (
   `id_node` int(11) NOT NULL,
-  `pertanyaan` varchar(25) NOT NULL,
+  `pertanyaan` varchar(50) NOT NULL,
   `id_ya` int(11) NOT NULL,
   `id_tidak` int(11) NOT NULL,
   `id_kriteria` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pohon`
+--
+
+INSERT INTO `pohon` (`id_node`, `pertanyaan`, `id_ya`, `id_tidak`, `id_kriteria`) VALUES
+(1, 'Apakah Tekanan Darah > 147 mmHg ?', 1, 1, 3),
+(2, 'Apakah Berat Badan > 70 kg ?', 2, 2, 1),
+(5, 'Apakah Mengonsumsi Makanan Berlemak Tinggi ?', 5, 5, 10),
+(6, 'Apakah Suhu > 38°C ?', 6, 6, 2);
 
 -- --------------------------------------------------------
 
