@@ -13,10 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/riwayat', 'KMSController@index');
 
-Route::get('/riwayat', function () {
-    return view('riwayat');
-});
+// Route::get('/riwayat', function () {
+//     return view('riwayat');
+// });
