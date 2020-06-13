@@ -13,10 +13,10 @@
     <header>
         <div class="jumbotron">
             <h1 style="font-size: 34px; margin-bottom: 20px;">SCPK Puskesmas Maju Jaya</h1>
-            <p>Membantu penatalaksanaan lansia dengan keluhan tertentu</p>
+            <h2>Membantu penatalaksanaan lansia dengan keluhan tertentu</h2>
         </div>
         <nav>
-            <a href="/">Input Data</a>
+            <a href="/kader">Input Data</a>
             <a href="/riwayat">Data Lansia</a>
         </nav>
     </header>   

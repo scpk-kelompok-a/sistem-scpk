@@ -21,14 +21,15 @@ time, mark, audio, video {
 
 body {
 	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+	background: rgba(187, 194, 187, 0.33);
 }
 
 
 
 .jumbotron {
-	background-color: #a1adb3;
+	background-color: #C4C4C4;
 	text-align: center;
-	color: white;
+	color: #000000;
 	font-size: 20px;
 	margin-bottom: 0;
 	border-radius: 0;
@@ -57,7 +58,7 @@ nav a:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
     margin-top: 20px;
 	padding: 20px;
-	background-color: #a1adb3;
+	background-color: #B3D3D1;
 }
 
 main .container {
