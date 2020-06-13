@@ -29,3 +29,7 @@ Route::get('/datalansia', function () {
 Route::get('/detdatalansia', function () {
     return view('detdatalansia');
 });
+
+Route::get('/hasil', function () {
+    return view('hasil');
+});

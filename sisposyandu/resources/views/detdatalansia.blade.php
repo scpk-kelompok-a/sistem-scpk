@@ -78,7 +78,7 @@
                         </select>
                     </div>
                 </div>
-                <a href="/detdatalansia" class="btn btn-lg btn-primary btn-block btn-login text-upper case font-weight-bold mb-2">Lihat Hasil</a>
+                <a href="/hasil" class="btn btn-lg btn-primary btn-block btn-login text-upper case font-weight-bold mb-2">Lihat Hasil</a>
             </div>
         </div>
     </div>
