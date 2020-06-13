@@ -15,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/riwayat', 'KMSController@index');
 
-Route::get('/index', function () {
+Route::get('/', function () {
     return view('index');
 });
