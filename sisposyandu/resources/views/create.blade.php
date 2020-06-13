@@ -92,7 +92,7 @@
                                 </select>
                             </div>
                         </div>
-                        <button class="btn btn-lg btn-primary btn-block btn-login text-upper  case font-weight-bold mb-2" type="submit">Tambah</button>
+                        <button class="btn btn-lg btn-primary btn-block btn-login text-upper case font-weight-bold mb-2" type="submit">Tambah</button>
                     </form>
                 </div>
             </div>

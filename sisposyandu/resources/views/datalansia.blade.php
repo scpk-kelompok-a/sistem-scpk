@@ -1,4 +1,4 @@
-@extends('layouts.base')
+@extends('layouts.basebidan')
 
 @section('title', 'Data Lansia')
 
@@ -27,7 +27,7 @@
                             <td class="align-baseline"></td>
                             <td class="align-baseline"></td>
                             <td class="align-baseline">
-                                <a href="" class="btn btn-danger">Lihat Hasil</a>
+                                <a href="/detdatalansia" class="btn btn-danger">Lihat Hasil</a>
                             </td>
                         </tr>
                     </tbody>

@@ -25,3 +25,7 @@ Route::get('/', function () {
 Route::get('/datalansia', function () {
     return view('datalansia');
 });
+
+Route::get('/detdatalansia', function () {
+    return view('detdatalansia');
+});
