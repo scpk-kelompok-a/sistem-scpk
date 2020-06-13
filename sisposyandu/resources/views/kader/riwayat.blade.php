@@ -20,6 +20,7 @@
                         <th scope="col">Nama Pasien</th>
                         <th scope="col">Alamat</th>
                         <th scope="col">Detail</th>
+                        <th></th>
                     </thead>
                     <tbody>
                         @foreach ($kms as $k)
@@ -29,7 +30,13 @@
                             <td class="align-baseline">{{$k->alamat}}</td>
                             <td class="align-baseline">
                                 <a type="submit" href="{{ route('kms.show', $k->id )}}" class="btn btn-info">Details</a>
-                                <a href="" class="btn btn-danger">Hapus</a>
+                            </td>
+                            <td class="align-baseline">
+                                <form action="{{ route('kms.destroy', $k->id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger">Hapus</button>
+                                </form>
                             </td>
                         </tr>
                         @endforeach

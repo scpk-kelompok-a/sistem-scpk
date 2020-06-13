@@ -16,7 +16,7 @@ class KMSController extends Controller
     public function index()
     {
         $kms = KMS::all();
-        return view('riwayat', compact('kms'));
+        return view('/kader/riwayat', compact('kms'));
     }
 
     /**
@@ -66,7 +66,7 @@ class KMSController extends Controller
     {
         $kms = KMS::find($id);
 
-        return view('detdata', compact('kms'));
+        return view('/kader/detdata', compact('kms'));
     }
 
     /**
@@ -77,7 +77,7 @@ class KMSController extends Controller
      */
     public function edit($id)
     {
-        //
+        
     }
 
     /**
@@ -89,7 +89,24 @@ class KMSController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validatedData = $request->validate([
+            'nama_lansia' => 'required',
+            'nama_pendamping' => 'required',
+            'usia' => 'required',
+            'jenis_kelamin' => 'required',
+            'alamat' => 'required',
+            'berat' => 'required',
+            'suhu' => 'required',
+            'tekanan_darah' => 'required',
+            'keluhan' => 'required',
+            'riwayat_penyakit' => 'required',
+            'pola_hidup' => 'required',
+            'pola_makan' => 'required'
+        ]);
+
+        KMS::whereId($id)->update($validatedData);
+
+        return redirect('/kms')->with('success', 'Data berhasil diubah');
     }
 
     /**
@@ -100,6 +117,9 @@ class KMSController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $kms = KMS::findOrFail($id);
+        $kms->delete();
+
+        return redirect('/kms');
     }
 }
