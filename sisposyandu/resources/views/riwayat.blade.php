@@ -1,6 +1,6 @@
 @extends('layouts.base')
 
-@section('title', 'Data Lansia')
+@section('title', 'Daftar Data Lansia')
 
 @section('header')
 
@@ -12,8 +12,6 @@
               <form action="/cari" method="GET" enctype="multipart/form-data" class="d-block d-lg-flex">
                 <div class="fields d-block d-lg-flex">
                   <h1 style="font-size: 34px; margin-bottom: 30px;">Data Lansia</h1>
-                    <div class="textfield-search one-third"><input type="text" name="cari" class="form-control" placeholder="Cari Data Lansia"></div>
-                    <input type="submit" class="search-submit btn btn-primary" value="Cari">  
                 </div>
               </form>
                 <table class="table">
@@ -24,12 +22,13 @@
                         <th scope="col">Detail</th>
                     </thead>
                     <tbody>
+                        @foreach ($kms as $k)
                         <tr>
-                            <th scope="row">1</th>
-                            <td> </td>
-                            <td></td>
-                            <td>
-                                <a href="" class="btn btn-info" data-toggle="modal" data-target="#detailModal">Details</a>
+                            <td class="align-baseline">{{$k->id}}</td>
+                            <td class="align-baseline">{{$k->nama_lansia}}</td>
+                            <td class="align-baseline">{{$k->alamat}}</td>
+                            <td class="align-baseline">
+                                <a type="submit" href="{{ route('kms.show', $k->id )}}" class="btn btn-info">Details</a>
                                 <a href="" class="btn btn-danger">Hapus</a>
                             </td>
                         </tr>

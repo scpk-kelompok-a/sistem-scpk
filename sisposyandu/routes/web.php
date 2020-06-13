@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::resource('kms', 'KMSController');
 
 Route::get('/kader', function () {
     return view('index');

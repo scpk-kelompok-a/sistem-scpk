@@ -20,7 +20,7 @@
         <p style = "left: 300px;">Bidan</p>
     </div>
     <div>
-        <a href="/kader">
+        <a href="{{ route('kms.index') }}">
         <img src="img/laptop-40935_1280.png" alt="Kader" style = "right: 400px;">   
         <p style = "right: 300px;">Kader</p>
         </a>
