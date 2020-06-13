@@ -16,6 +16,7 @@
             <h2>Membantu penatalaksanaan lansia dengan keluhan tertentu</h2>
         </div>
         <nav>
+            <a href="/">Beranda</a>
             <a href="/kms/create">Input Data</a>
             <a href="/kms">Data Lansia</a>
         </nav>

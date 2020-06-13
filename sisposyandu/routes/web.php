@@ -21,3 +21,7 @@ Route::get('/kader', function () {
 Route::get('/', function () {
     return view('home');
 });
+
+Route::get('/datalansia', function () {
+    return view('datalansia');
+});
