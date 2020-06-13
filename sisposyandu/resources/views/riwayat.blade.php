@@ -24,11 +24,10 @@
                         <th scope="col">Detail</th>
                     </thead>
                     <tbody>
-                        @foreach ($querykms as $q)
                         <tr>
                             <th scope="row">1</th>
-                            <td> {{$q->nama_lansia}} </td>
-                            <td> {{$q->alamat}} </td>
+                            <td> </td>
+                            <td></td>
                             <td>
                                 <a href="" class="btn btn-info" data-toggle="modal" data-target="#detailModal">Details</a>
                                 <a href="" class="btn btn-danger">Hapus</a>

@@ -17,7 +17,7 @@
         </div>
         <nav>
             <a href="/kader">Input Data</a>
-            <a href="/riwayat">Data Lansia</a>
+            <a href="/kms">Data Lansia</a>
         </nav>
     </header>   
 
