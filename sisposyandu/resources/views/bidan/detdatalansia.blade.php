@@ -25,7 +25,7 @@
                     <div class="form-group col-6">
                         <label for="jenis_kelamin">Jenis Kelamin</label>
                         <br>
-                        <input style="width: 100px" class="form-control" type="text" id="jenis_kelamin" name="jenis_kelamin">
+                        <input style="width: 100px" class="form-control" type="text" id="jenis_kelamin" name="jenis_kelamin" value="{{$kms->jenis_kelamin}}" readonly>
                     </div>
                     <div class="form-group col-12">
                         <label for="alamat">Alamat Lengkap</label>
