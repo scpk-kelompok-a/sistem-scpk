@@ -22,14 +22,16 @@
                         <th scope="col">Aksi</th>
                     </thead>
                     <tbody>
+                        @foreach($kms as $k)
                         <tr>
-                            <td class="align-baseline"></td>
-                            <td class="align-baseline"></td>
-                            <td class="align-baseline"></td>
+                            <td class="align-baseline">{{$k->id}}</td>
+                            <td class="align-baseline">{{$k->nama_lansia}}</td>
+                            <td class="align-baseline">{{$k->alamat}}</td>
                             <td class="align-baseline">
-                                <a href="/detdatalansia" class="btn btn-danger">Lihat Hasil</a>
+                                <a href="{{ route('bidan.show', $k->id) }}" class="btn btn-danger">Lihat Hasil</a>
                             </td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

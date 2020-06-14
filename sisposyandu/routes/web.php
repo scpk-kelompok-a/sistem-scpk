@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 Route::resource('kms', 'KMSController');
 
+Route::resource('bidan', 'BidanController');
+
 Route::get('/kader', function () {
     return view('index');
 });

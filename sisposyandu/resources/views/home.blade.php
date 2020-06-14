@@ -16,7 +16,7 @@
     </header>
     <br>
     <div>
-        <a href="/datalansia">  
+        <a href="{{ route('bidan.index') }}">  
         <img src="img/hospital-1706646_1280.png" alt="Bidan" style = "left: 400px;">
         <p style = "left: 300px;">Bidan</p>
         </a>

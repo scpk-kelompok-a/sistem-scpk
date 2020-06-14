@@ -17,7 +17,7 @@
         </div>
         <nav>
             <a href="/">Beranda</a>
-            <a href="/datalansia">Data Lansia</a>
+            <a href="{{ route('bidan.index') }}">Data Lansia</a>
         </nav>
     </header>   
 
