@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
-class Kriteria extends Migration
+class kriteria extends Migration
 {
     /**
      * Run the migrations.
@@ -15,9 +15,9 @@ class Kriteria extends Migration
     {
         Schema::create('kriteria', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nama_kriteria');
-            $table->integer('bobot');
-            $table->string('sifat');
+            $table->string('nama')->nullable();
+            $table->string('attribute')->nullable();
+            $table->double('bobot')->default(0);
         });
     }
 
@@ -28,6 +28,6 @@ class Kriteria extends Migration
      */
     public function down()
     {
-        Schema::drop('kriteria');
+        Schema::dropIfExists('kreteria');
     }
 }

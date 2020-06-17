@@ -8,12 +8,11 @@ class Kriteria extends Model
 {
     protected $table = 'kriteria';
 
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'id_kriteria';
 
     protected $fillable = [
-        'id',
         'nama_kriteria',
-        'bobot',
-        'sifat'
+        'atribut',
+        'bobot'
     ];
 }

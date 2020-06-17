@@ -26,7 +26,7 @@ class KMSController extends Controller
      */
     public function create()
     {
-        return view('create');
+        return view('/kader/create');
     }
 
     /**

@@ -9,9 +9,9 @@
     <div class="row">
         <div class="col-12 p-5">
             <div class="style-card">
+                <h1 style="font-size: 34px; margin-bottom: 30px;">Data Lansia</h1>
               <form action="/cari" method="GET" enctype="multipart/form-data" class="d-block d-lg-flex">
                 <div class="fields d-block d-lg-flex">
-                  <h1 style="font-size: 34px; margin-bottom: 30px;">Data Lansia</h1>
                 </div>
               </form>
                 <table class="table">

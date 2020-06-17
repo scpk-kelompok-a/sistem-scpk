@@ -11,7 +11,23 @@
             <p style="text-align: center; font-size: 50px">Hasil</p>
             <div class="style-card">
                 <div class="row justify-content-between">
-                    <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-6"></div>
+                    <div class="col-12">
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <th scope="col">No.</th>
+                                <th scope="col">Alternatif</th>
+                                <th></th>
+                            </thead>
+                            <tbody>
+                                @foreach ($alt as $a)
+                                <tr>
+                                    <td class="align-baseline">{{$a->id_alternatif}}</td>
+                                    <td class="align-baseline">{{$a->nama_alternatif}}</td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

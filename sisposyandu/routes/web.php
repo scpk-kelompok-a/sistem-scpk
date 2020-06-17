@@ -16,6 +16,8 @@ Route::resource('kms', 'KMSController');
 
 Route::resource('bidan', 'BidanController');
 
+// Route::get('/hasil', 'BidanController@hasil');
+
 Route::get('/kader', function () {
     return view('index');
 });
@@ -32,6 +34,8 @@ Route::get('/detdatalansia', function () {
     return view('detdatalansia');
 });
 
-Route::get('/hasil', function () {
-    return view('hasil');
-});
+Route::get('/hasil', 'BidanController@view');
+
+// Route::get('/hasil', function () {
+//     return view('hasil');
+// });

@@ -4,20 +4,28 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAlternatifTable extends Migration
+class Alternatif extends Migration
 {
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
     public function up()
     {
         Schema::create('alternatif', function (Blueprint $table) {
-
-		$table->integer('id_alternatif',11);
-		$table->string('nama_alternatif');
-
+            $table->increments('id');
+            $table->string('nama')->nullable();
         });
     }
 
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
     public function down()
     {
-        Schema::dropIfExists('alternatif');
+        //
     }
 }

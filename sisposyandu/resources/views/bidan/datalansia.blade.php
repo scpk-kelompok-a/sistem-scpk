@@ -7,13 +7,7 @@
     <div class="row">
         <div class="col-12 p-5">
             <div class="style-card">
-              <form action="/cari" method="GET" enctype="multipart/form-data" class="d-block d-lg-flex">
-                <div class="fields d-block d-lg-flex">
-                  <h1 style="font-size: 34px; margin-bottom: 30px;">Data Lansia</h1>
-                    <div class="textfield-search one-third"><input type="text" name="cari" class="form-control" placeholder="Cari Data Lansia"></div>
-                    <input type="submit" class="search-submit btn btn-primary" value="Cari">  
-                </div>
-              </form>
+                <h1 style="font-size: 34px; margin-bottom: 30px;">Data Lansia</h1>
                 <table class="table">
                     <thead class="thead-dark">
                         <th scope="col">No.</th>
