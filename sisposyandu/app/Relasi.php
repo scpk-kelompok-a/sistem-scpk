@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Relasi extends Model
 {
-    protected $table = 'relasi';
+    protected $table = 'relations';
 
     protected $fillable = [
         'alternatif', 'kriteria', 'nilai',

@@ -9,17 +9,24 @@ use App\Relasi;
 
 class Helper extends Model
 {
+	public static function sifat($sifat){
+		if ($sifat == 1) {
+			echo "Benefit";
+		}else if($sifat == 2){
+			echo "Cost";
+		}
+	}
     public static function bobot($bobot){
 		if ($bobot == 1) {
-			echo "Tidak Penting";
+			echo "1";
 		}else if($bobot == 2){
-			echo "Kurang Penting";
+			echo "2";
 		}else if($bobot == 3){
-			echo "Cukup Penting";
+			echo "3";
 		}else if($bobot == 4){
-			echo "Penting";
+			echo "4";
 		}else if($bobot == 5){
-			echo "Sangat Penting";
+			echo "5";
 		}
     }
     
@@ -37,17 +44,12 @@ class Helper extends Model
 		return $data->nama_kriteria;
 	}
 
-	public static function nilai_atribut($id)
+	public static function nilai_sifat($id)
 	{
 		$data = Kriteria::find($id);
-		return $data->atribut;
+		return $data->sifat;
 	}
 
-	public static function jabatan($id)
-	{
-		$data = User::find($id);
-		return $data->jabatan;
-	}
 
 	public static function kode($id)
 	{

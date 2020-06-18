@@ -2,86 +2,33 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\KMS;
-use App\Kriteria;
-use App\Alternatif;
-use App\Relasi;
+use App\Criteria;
+use App\Alternative;
+use App\Relation;
 use App\Result;
 
-class BidanController extends Controller
+class HasilController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function __construct()
+    {
+        
+    }
+
     public function index()
     {
-        $kms = KMS::all();
-        $krit = Kriteria::all();
-        $alt = Alternatif::all();
-        return view('/bidan/datalansia', compact('kms'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show(KMS $kms, $id)
-    {
-        $kms = KMS::find($id);
-
-        return view('/bidan/detdatalansia', compact('kms'));
-    }
-
-    public function view()
-    {
-        $alt = Alternatif::all();
-
-        return view('hasil', compact('alt'));
-    }
-
-    public function hasil()
-    {
-        // $kms = KMS::find($id);
-
-        $kriteria = Kriteria::all();
+    	$kriteria = Criteria::all();
     	foreach ($kriteria as $keyK => $dataK) {
     		$id_kriteria[] = $dataK->id_kriteria;
     		$bobot[] = $dataK->bobot;
     		$sifat[] = $dataK->sifat;
     	}
-    	$alternatif = Alternatif::all();
+    	$alternatif = Alternative::all();
     	foreach ($alternatif as $keyT => $dataT) {
     		$id_alternatif[] = $dataT->id_alternatif;
     	}
         // dd($bobot);
-    	$relasi = Relasi::all();
+    	$relasi = Relation::all();
     	$jmlh_bobot = $kriteria->sum('bobot');
     	$jmlh_kriteria = $kriteria->count();
     	$jmlh_alternatif = $alternatif->count();
@@ -158,42 +105,8 @@ class BidanController extends Controller
         // dd($preferensi);
 
     	//proses perangkingan nilai
-        $rangking = Result::orderBy('hasil','desc')->get();
-        
-        return view('hasil', compact('kriteria','alternatif','relasi','jmlh_kriteria','jmlh_alternatif','normalisasi','normalisasi_terbobot','positif','negatif','hasil_positif','hasil_negatif','preferensi','rangking'));
-    }
+    	$rangking = Result::orderBy('hasil','desc')->get();
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+    	return view('hasil', compact('kriteria','alternatif','relasi','jmlh_kriteria','jmlh_alternatif','normalisasi','normalisasi_terbobot','positif','negatif','hasil_positif','hasil_negatif','preferensi','rangking'));
     }
 }

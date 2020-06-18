@@ -39,3 +39,22 @@ Route::get('/hasil', 'BidanController@view');
 // Route::get('/hasil', function () {
 //     return view('hasil');
 // });
+
+Route::group(['prefix' => 'kriteria'], function () {
+	Route::get('/', 'KriteriaController@index');
+	Route::post('/tambah', 'KriteriaController@insert');
+	Route::get('/edit/{id}', 'KriteriaController@edit');
+	Route::post('/update', 'KriteriaController@update');
+	Route::get('/hapus/{id}', 'KriteriaController@delete');
+});
+
+Route::group(['prefix' => 'alternatif'], function () {
+	Route::get('/', 'AlternatifController@index');
+	Route::get('/penilaian/{alternatif}', 'AlternatifController@value');
+	Route::post('/nilai_simpan', 'AlternatifController@store');
+	Route::get('/detail/{id}', 'AlternatifController@show');
+	Route::post('/tambah', 'AlternatifController@insert');
+	Route::get('/edit/{id}', 'AlternatifController@edit');
+	Route::post('/update', 'AlternatifController@update');
+	Route::get('/hapus/{id}', 'AlternatifController@delete');
+});
