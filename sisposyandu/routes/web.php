@@ -58,3 +58,5 @@ Route::group(['prefix' => 'alternatif'], function () {
 	Route::post('/update', 'AlternatifController@update');
 	Route::get('/hapus/{id}', 'AlternatifController@delete');
 });
+
+Route::get('hasil', 'HasilController@index');

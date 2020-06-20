@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Criteria;
-use App\Alternative;
-use App\Relation;
+use App\Kriteria;
+use App\Alternatif;
+use App\Relasi;
 use App\Result;
+// use App\KMS;
 
 class HasilController extends Controller
 {
@@ -17,18 +18,26 @@ class HasilController extends Controller
 
     public function index()
     {
-    	$kriteria = Criteria::all();
+    	$kriteria = Kriteria::all();
     	foreach ($kriteria as $keyK => $dataK) {
     		$id_kriteria[] = $dataK->id_kriteria;
     		$bobot[] = $dataK->bobot;
     		$sifat[] = $dataK->sifat;
     	}
-    	$alternatif = Alternative::all();
+    	$alternatif = Alternatif::all();
     	foreach ($alternatif as $keyT => $dataT) {
     		$id_alternatif[] = $dataT->id_alternatif;
-    	}
+        }
+        // $kms = KMS::all();
+    	// foreach ($kms as $keyS => $dataS) {
+        //     $id[] = $dataS->id;
+        //     $berat[] = $dataS->berat;
+        //     $suhu[] = $dataS->suhu;
+        //     $tekanan_darah[] = $dataS->tekanan_darah;
+        // }
+
         // dd($bobot);
-    	$relasi = Relation::all();
+    	$relasi = Relasi::all();
     	$jmlh_bobot = $kriteria->sum('bobot');
     	$jmlh_kriteria = $kriteria->count();
     	$jmlh_alternatif = $alternatif->count();

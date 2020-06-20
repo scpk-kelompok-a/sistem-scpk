@@ -60,6 +60,6 @@ class Helper extends Model
 	public static function alternatif($id)
 	{
 		$data = Alternatif::find($id);
-		return $data->nama;
+		return $data->nama_alternatif;
 	}
 }

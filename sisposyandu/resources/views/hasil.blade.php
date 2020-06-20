@@ -16,16 +16,16 @@
                             <thead class="thead-dark">
                                 <th scope="col">No.</th>
                                 <th scope="col">Alternatif</th>
-                                <th></th>
+                                <th scope="col">Nilai Prefensi</th>
                             </thead>
                             <tbody>
-                                @foreach ($alt as $a)
-                                <tr>
-                                    <td class="align-baseline">{{$a->id_alternatif}}</td>
-                                    <td class="align-baseline">{{$a->nama_alternatif}}</td>
-                                </tr>
-                                @endforeach
+                            @foreach ($rangking as $key => $data)
+                            <tbody>
+                                <td>{{$key+1}}</td>
+                                <td>{{\App\Helper::alternatif($data->alternatif)}}</td>
+                                <td>{{$data->hasil}}</td>
                             </tbody>
+                            @endforeach
                         </table>
                     </div>
                 </div>
