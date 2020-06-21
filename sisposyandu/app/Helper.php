@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 use App\Kriteria;
 use App\Alternatif;
 use App\Relasi;
+use App\KMS;
+
 
 class Helper extends Model
 {
@@ -28,8 +30,8 @@ class Helper extends Model
 		}else if($bobot == 5){
 			echo "5";
 		}
-    }
-    
+	}
+	    
     public static function nilai($alternatif,$kriteria)
 	{
 		$data = Relasi::where('alternatif',$alternatif)->where('kriteria',$kriteria)->orderBy('nilai','ASC')->get();

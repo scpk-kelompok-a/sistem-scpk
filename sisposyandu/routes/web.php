@@ -34,7 +34,7 @@ Route::get('/detdatalansia', function () {
     return view('detdatalansia');
 });
 
-Route::get('/hasil', 'BidanController@view');
+Route::get('/hasil', 'BidanController@hasil');
 
 // Route::get('/hasil', function () {
 //     return view('hasil');
@@ -59,4 +59,4 @@ Route::group(['prefix' => 'alternatif'], function () {
 	Route::get('/hapus/{id}', 'AlternatifController@delete');
 });
 
-Route::get('hasil', 'HasilController@index');
+// Route::get('hasil', 'HasilController@index');

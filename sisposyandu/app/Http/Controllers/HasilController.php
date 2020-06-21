@@ -7,7 +7,7 @@ use App\Kriteria;
 use App\Alternatif;
 use App\Relasi;
 use App\Result;
-// use App\KMS;
+use App\KMS;
 
 class HasilController extends Controller
 {
@@ -28,13 +28,20 @@ class HasilController extends Controller
     	foreach ($alternatif as $keyT => $dataT) {
     		$id_alternatif[] = $dataT->id_alternatif;
         }
-        // $kms = KMS::all();
-    	// foreach ($kms as $keyS => $dataS) {
-        //     $id[] = $dataS->id;
-        //     $berat[] = $dataS->berat;
-        //     $suhu[] = $dataS->suhu;
-        //     $tekanan_darah[] = $dataS->tekanan_darah;
-        // }
+        $kms = KMS::all();
+    	foreach ($kms as $keyS => $dataS) {
+            $id[] = $dataS->id;
+            $berat[] = $dataS->berat;
+            $suhu[] = $dataS->suhu;
+            $sesak_nafas[] = $dataS->sesak_nafas;
+            $pusing[] = $dataS->pusing;
+            $masuk_angin[] = $dataS->masuk_angin;
+            $diabetes[] = $dataS->diabetes;
+            $darah_tinggi[] = $dataS->darah_tinggi;
+            $makanan_berlemak_tinggi[] = $dataS->makanan_berlemak_tinggi;
+            $berolahraga[] = $dataS->berolahraga;
+        }
+        $jmlh_kms = $kms->count();
 
         // dd($bobot);
     	$relasi = Relasi::all();

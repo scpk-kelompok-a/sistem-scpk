@@ -79,12 +79,28 @@ class BidanController extends Controller
     	$alternatif = Alternatif::all();
     	foreach ($alternatif as $keyT => $dataT) {
     		$id_alternatif[] = $dataT->id_alternatif;
-    	}
+        }
+        $kms = KMS::all();
+    	foreach ($kms as $keyS => $dataS) {
+            $id[] = $dataS->id;
+            $berat[] = $dataS->berat;
+            $suhu[] = $dataS->suhu;
+            $sesak_nafas[] = $dataS->sesak_nafas;
+            $pusing[] = $dataS->pusing;
+            $masuk_angin[] = $dataS->masuk_angin;
+            $diabetes[] = $dataS->diabetes;
+            $darah_tinggi[] = $dataS->darah_tinggi;
+            $makanan_berlemak_tinggi[] = $dataS->makanan_berlemak_tinggi;
+            $berolahraga[] = $dataS->berolahraga;
+        }
+        $jmlh_kms = $kms->count();
+
         // dd($bobot);
     	$relasi = Relasi::all();
     	$jmlh_bobot = $kriteria->sum('bobot');
     	$jmlh_kriteria = $kriteria->count();
-    	$jmlh_alternatif = $alternatif->count();
+        $jmlh_alternatif = $alternatif->count();
+        
 
     	//Tahap 1 = Mencari Perpangkatan dari masing-masing bobot
         for ($i=0;$i<$jmlh_kriteria;$i++){
