@@ -47,15 +47,30 @@
                             </div>
                             <div class="form-group col-4">
                                 <label for="berat">Berat</label>
-                                <input type="text" id="berat" class="form-control" name="berat">
+                                <div class="input-group w-50">
+                                    <input type="text" id="berat" class="form-control" name="berat">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">kg</span>
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-group col-4">
                                 <label for="suhuTubuh">Suhu Tubuh</label>
-                                <input type="text" id="suhuTubuh" class="form-control" name="suhu">
+                                <div class="input-group w-50">
+                                    <input type="text" id="suhuTubuh" class="form-control" name="suhu">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">°C</span>
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-group col-4">
                                 <label for="tekananDarah">Tekanan Darah</label>
-                                <input type="text" id="tekananDarah" class="form-control" name="tekanan_darah">
+                                <div class="input-group w-50">
+                                    <input type="text" id="tekananDarah" class="form-control" name="tekanan_darah">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">mmHg</span>
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-group col-lg-6 col-md-6 col-xs-12 col-sm-12">
                                 <label for="keluhanLansia">Keluhan Lansia</label>
